@@ -15,10 +15,24 @@ export default class SettingsScreen extends React.Component {
     title: 'Setting',
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      wallet: "",
+      key: ""
+    };
+  }
+
+  componentDidMount() {
+    this._getWallet();
+  }
+  
   render() {
     const { manifest } = Constants;
     const sections = [
       { data: [{ value: manifest.version }], title: 'Version' },
+      { data: [{ value: this.state.wallet }], title: 'Wallet' },
       {
         data: [{ value: 'Sign Out', type: 'button' }],
         title: 'Sign Out',
@@ -48,6 +62,16 @@ export default class SettingsScreen extends React.Component {
       return null;
     return <SectionHeader title={section.title} />;
   };
+
+  _getWallet = async () => {
+    let wallet = await AsyncStorage.getItem('wallet');
+    let key = await AsyncStorage.getItem('key');
+
+    this.setState({
+      wallet,
+      key
+    });
+  }
 
   _renderItem = ({ item }) => {
     if (item.type === 'button') {

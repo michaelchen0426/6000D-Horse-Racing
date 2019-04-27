@@ -6,6 +6,7 @@ import {
     Text,
     Dimensions
 } from 'react-native';
+import Expo from 'expo';
 import { Button, Icon, Input, ThemeProvider } from 'react-native-elements';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -70,7 +71,7 @@ class SignInScreen extends React.Component {
                                 size={25}
                             />
                         }
-                        placeholder="Email"
+                        placeholder="Address"
                         autoCapitalize="none"
                         autoCorrect={false}
                         keyboardType="email-address"
@@ -92,7 +93,8 @@ class SignInScreen extends React.Component {
                         keyboardType="default"
                         returnKeyType="next"
                     />
-                    <Button title="Sign in!" onPress={this._signInAsync} />
+                    <Button style={styles.signInButtonStyle} title="Sign in!" onPress={this._signInAsync} />
+                    <Button style={styles.signUpButtonStyle} title="Sign up!" onPress={this._signInAsync} />
                 </View>
             </ThemeProvider>
         );
@@ -100,8 +102,25 @@ class SignInScreen extends React.Component {
 
     _signInAsync = async () => {
         await AsyncStorage.setItem('userToken', 'abc');
+        await AsyncStorage.setItem('wallet', '0x6F09CFA86942138875c11f0C865145F6e31a898f');
+        await AsyncStorage.setItem('key', '2FA3C6CB575CD1D06D03040ED3FF0DB452DCDAC1460DFFDFB8B7C016D803B50C');
         this.props.navigation.navigate('App');
     };
+
+    /*
+    https://medium.com/coinmonks/minimum-viable-ethereum-mobile-wallet-part-3-account-private-key-1f8fa3d20f3
+    
+  _handleSubmit = async (values, bag) => {
+    var x = global.web3.eth.accounts.create(web3.utils.randomHex(32));
+    await Expo.SecureStore.setItemAsync('key', x.privateKey.substring(2));
+    await Expo.SecureStore.setItemAsync('wallet', x.address);
+    this.setState({address: x.address});
+    this.setState({key: x.privateKey.substring(2)});
+    console.log("myaddress:" + x.address);
+    console.log("mykey:" + x.privateKey.substring(2));
+  };
+
+    */
 }
 
 const styles = StyleSheet.create({
@@ -110,6 +129,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    signInButtonStyle: {
+        marginTop: 20,
+        width: SCREEN_WIDTH - 70,
+        marginBottom: 20
+    },
+    signUpButtonStyle: {
+        width: SCREEN_WIDTH - 70
+    }
 });
 
 export default SignInScreen;

@@ -5,7 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import RacingDetailScreen from '../screens/RacingDetailScreen';
-import LinksScreen from '../screens/LinksScreen';
+import TransactionScreen from '../screens/TransactionScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
@@ -27,11 +27,11 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const TransactionStack = createStackNavigator({
+  Transactions: TransactionScreen,
 });
 
-LinksStack.navigationOptions = {
+TransactionStack.navigationOptions = {
   tabBarLabel: 'Trans',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -57,6 +57,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  TransactionStack,
   SettingsStack,
 });
