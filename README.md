@@ -4,8 +4,6 @@
 
 Gallop Chain
 
-**M+** presents its second hackathon, on **16–17 March**. During this two-day event, we invite designers, artists, technologists, and cultural enthusiasts to use M+ Collections open data as raw material for creative and artistic projects. Participants are encouraged to examine, interpret, and activate the M+ Collections through design, code, or other mediums.
-
 # Project Folder Structure
 
 - **BackEnd**: It's for Web Service that will connect to the Database and serve the Front-end app.
