@@ -27,7 +27,14 @@ export default class HorseRacingCard extends React.Component {
         } = raceData;
 
         return (
-            <Card title={title}>
+            <Card title={title}
+                titleStyle={{ color: "#ffffff" }}
+                containerStyle={{
+                    backgroundColor: 'rgba(13, 13, 33, 1)',
+                    borderWidth: 0,
+                    borderBottomWidth: 1
+                }}
+            >
                 <TouchableOpacity style={styles.cardContentStyle} onPress={() => onPress(raceData)}>
                     <Image
                         style={{ width: 100, height: 150 }}
@@ -58,7 +65,8 @@ const styles = StyleSheet.create({
     cardContentStyle: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'rgba(13, 13, 33, 1)'
     },
     descriptionViewStyle: {
         marginLeft: 20,
@@ -66,6 +74,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start'
     },
     textStyle: {
-        marginBottom: 10
+        marginBottom: 10,
+        color: "#ffffff"
     }
 })

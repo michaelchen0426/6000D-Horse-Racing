@@ -11,7 +11,17 @@ import SettingsScreen from '../screens/SettingsScreen';
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
   Details: RacingDetailScreen
-});
+},
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: 'rgba(13, 13, 33, 1)',
+      },
+      headerTitleStyle: {
+        color: "#fff"
+      }
+    }
+  });
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Racing',
@@ -59,4 +69,10 @@ export default createBottomTabNavigator({
   HomeStack,
   TransactionStack,
   SettingsStack,
-});
+}, {
+    tabBarOptions: {
+      style: {
+        backgroundColor: 'rgba(13, 13, 33, 1)'
+      }
+    }
+  });

@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Text } from 'react-native-elements';
+import { Text, Divider } from 'react-native-elements';
 
 import HorseRacingCard from '../components/HorseRacingCard';
 import { racingList } from '../constants/MockData';
@@ -26,7 +26,7 @@ export default class HomeScreen extends React.Component {
   }
 
   _onPressRace = (raceData) => {
-    this.props.navigation.navigate('Details', {data: raceData});
+    this.props.navigation.navigate('Details', { data: raceData });
   }
 
   render() {
@@ -36,10 +36,15 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
-            <Text h4>
+            <Text style={{
+              color: "#ffffff",
+              fontSize: 20,
+              fontWeight: 'bold'
+            }}>
               Coming Racing..
             </Text>
           </View>
+          <Divider style={{ marginTop: -10, backgroundColor: 'white' }}/>
           {data.map((raceData, index) =>
             <HorseRacingCard
               key={index}
@@ -56,12 +61,13 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(13, 13, 33, 1)',
   },
   contentContainer: {
     paddingTop: 45,
   },
   welcomeContainer: {
+    flexDirection: "column",
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,

@@ -4,7 +4,8 @@ import {
     StyleSheet,
     View,
     Text,
-    Dimensions
+    Dimensions,
+    Image
 } from 'react-native';
 import Expo from 'expo';
 import { Button, Icon, Input, ThemeProvider } from 'react-native-elements';
@@ -52,15 +53,20 @@ class SignInScreen extends React.Component {
                         paddingBottom: 30,
                     }}
                 >
+                    <Image
+                        style={{ width: SCREEN_WIDTH - 80, height: 300, resizeMode: "contain" }}
+                        source={require('../assets/images/logo.png')}
+                    />
                     <Text
                         style={{
                             color: 'white',
                             fontSize: 30,
                             marginVertical: 10,
                             fontWeight: '300',
+                            marginBottom: 30
                         }}
                     >
-                        Login
+                        Let the Bet Begin...
               </Text>
                     <Input
                         leftIcon={
@@ -94,6 +100,7 @@ class SignInScreen extends React.Component {
                         returnKeyType="next"
                     />
                     <Button style={styles.signInButtonStyle} title="Sign in!" onPress={this._signInAsync} />
+                    <Button style={styles.loginButtonStyle} title="Login via HKJC" onPress={this._signInAsync} />
                     <Button style={styles.signUpButtonStyle} title="Sign up!" onPress={this._signInAsync} />
                 </View>
             </ThemeProvider>
@@ -136,6 +143,10 @@ const styles = StyleSheet.create({
     },
     signUpButtonStyle: {
         width: SCREEN_WIDTH - 70
+    },
+    loginButtonStyle: {
+        width: SCREEN_WIDTH - 70,
+        marginBottom: 20
     }
 });
 

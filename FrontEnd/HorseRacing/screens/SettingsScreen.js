@@ -13,6 +13,13 @@ import { Constants } from 'expo';
 export default class SettingsScreen extends React.Component {
   static navigationOptions = {
     title: 'Setting',
+    headerStyle: {
+      backgroundColor: 'rgba(13, 13, 33, 1)'
+    },
+    headerTitleStyle: {
+      color: "#fff",
+      fontSize: 20,
+    }
   };
 
   constructor(props) {
@@ -154,7 +161,7 @@ const AppIconPreview = ({ iconUrl }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(13, 13, 33, 1)'
   },
   titleContainer: {
     paddingHorizontal: 15,
@@ -167,14 +174,16 @@ const styles = StyleSheet.create({
     paddingTop: 2,
   },
   sectionHeaderContainer: {
-    backgroundColor: '#fbfbfb',
+    backgroundColor: 'rgba(13, 13, 33, 1)',
     paddingVertical: 8,
     paddingHorizontal: 15,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#ededed',
+    //borderWidth: StyleSheet.hairlineWidth,
+    //borderColor: '#ffffff',
+    color: "#ffffff"
   },
   sectionHeaderText: {
     fontSize: 14,
+    color: "#ffffff"
   },
   sectionContentContainer: {
     paddingTop: 8,
@@ -188,6 +197,7 @@ const styles = StyleSheet.create({
   nameText: {
     fontWeight: '600',
     fontSize: 18,
+    color: "#fff"
   },
   slugText: {
     color: '#a39f9f',
