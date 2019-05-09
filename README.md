@@ -111,12 +111,12 @@ node deploy.js
 
 ## Screenshots from the game
 
-![alt text](https://i.ibb.co/BtvtB4n/Start-Game.png)
+![alt text](https://i.ibb.co/gdZtFMP/db-schema-002.png)
 
 
 ## High-level System Architecture
 
-![alt text](https://i.ibb.co/BtvtB4n/Start-Game.png)
+![alt text](https://i.ibb.co/gdZtFMP/db-schema-002.png)
 
 ## Database Schema
 
