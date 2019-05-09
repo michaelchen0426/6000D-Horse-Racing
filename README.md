@@ -109,14 +109,14 @@ node deploy.js
 
 # How does this work ?
 
-## Screenshots from the game
+## Screenshots of the application
 
-![alt text](https://i.ibb.co/gdZtFMP/db-schema-002.png)
+![alt text](https://i.ibb.co/g4Kvp7s/Gallop-Chain.png)
 
 
 ## High-level System Architecture
 
-![alt text](https://i.ibb.co/gdZtFMP/db-schema-002.png)
+![alt text](https://i.ibb.co/LxfK02p/Edited-Architecture-Draw-IO.png)
 
 ## Database Schema
 
