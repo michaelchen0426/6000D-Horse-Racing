@@ -111,6 +111,19 @@ node deploy.js
 
 ## Screenshots from the game
 
+![alt text](https://i.ibb.co/BtvtB4n/Start-Game.png)
+
+
+## High-level System Architecture
+
+![alt text](https://i.ibb.co/BtvtB4n/Start-Game.png)
+
+## Database Schema
+
+![alt text](https://i.ibb.co/gdZtFMP/db-schema-002.png)
+
+In the above schema the table with user-details (users_only_for_Account_Creation) is created temporary and after creation of the corresponding wallet, it will be deleted.
+
 ## Future Work
 
 
