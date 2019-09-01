@@ -129,6 +129,8 @@ In the above schema the table with user-details (users_only_for_Account_Creation
 
 ## Work Flow
 
+![Work Flow](https://user-images.githubusercontent.com/10368112/64072648-12f23e80-ccc5-11e9-900a-2ef6007282be.png)
+
 ## Authors
 
 _Abhishek P_, <br/>
