@@ -27,7 +27,7 @@ Key components for the FrontEnd App:
 
 - Wrapper: Expo.io https://expo.io.
 - UI Component: react-native-elements https://react-native-training.github.io/react-native-elements/
-- Navigation: React-navigation https://reactnavigation.org 
+- Navigation: React-navigation https://reactnavigation.org
 
 ### How to run the Ethereum scripts
 
@@ -36,15 +36,17 @@ The smart contract is written by **Solidity** and we used Ethereum for our block
 1. **Geth** as our ethereum client node. Details are here https://github.com/ethereum/go-ethereum/wiki/geth.
 2. **solc-js** as our Solidity complier. Details are here https://github.com/ethereum/solc-js.
 3. **Ropsten** as our testnet of Blockchain.
+4. **Remix** is a good online Ethereum IDE. We can try our script and connect to test account.
 
 Firstly, we need to install all above components:
 
 #### Install Solidity Compiler in macOs:
 
-Details are https://solidity.readthedocs.io/en/v0.5.3/installing-solidity.html. Use **brew** to install, 
+Details are https://solidity.readthedocs.io/en/v0.5.3/installing-solidity.html. Use **brew** to install,
+
 ```
-	Brew tap ethereum/ethereum
-	Brew install solidity
+brew tap ethereum/ethereum
+brew install solidity
 ```
 
 #### Compile Smart Contract
@@ -97,22 +99,23 @@ Geth --testnet --rpc -rpcapi=”eth,net,web3,personal,txpool” --syncmode=light
 geth attach http://127.0.0.1:8545
 ```
 
-After we run above command, we are able to connect to Geth client via JS code by using the url http://127.0.0.1:8545 in our script. 
+After we run above command, we are able to connect to Geth client via JS code by using the url http://127.0.0.1:8545 in our script.
 
 #### Create and Deploy Smart Contract
 
 ```
 cd ./Ethereum
-npm install 
+npm install
 node deploy.js
 ```
+
+Sample Smart Contract Link: https://ropsten.etherscan.io/address/0x2bc235b4e4bde64cb70ba5f277ccfeffea8f2557
 
 # How does this work ?
 
 ## Screenshots of the application
 
 ![alt text](https://i.ibb.co/g4Kvp7s/Gallop-Chain.png)
-
 
 ## High-level System Architecture
 
@@ -124,8 +127,7 @@ node deploy.js
 
 In the above schema the table with user-details (users_only_for_Account_Creation) is created temporary and after creation of the corresponding wallet, it will be deleted.
 
-## Future Work
-
+## Work Flow
 
 ## Authors
 
